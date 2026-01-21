@@ -1,0 +1,40 @@
+
+header{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav > span {
+    margin: 0 1rem;
+}
+
+.nav span{
+    color: #747474;
+}
+
+.marca{
+    font-weight: 700;
+}
+.nav > span:hover{
+    cursor: pointer;
+}
+
+.start{
+    background: rgb(8, 163, 129);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 900; 
+}
+
+.start:hover{
+    cursor: pointer;
+}
