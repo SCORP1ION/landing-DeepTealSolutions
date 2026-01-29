@@ -17,3 +17,26 @@
     font-size: 25px;
 }
 
+@media (max-width: 768px) {
+    .contenido h2 {
+        font-size: 1.75rem;
+        padding-top: 2rem;
+    }
+
+    .contenido a {
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenido h2 {
+        font-size: 1.5rem;
+    }
+
+    .contenido a {
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+}
+

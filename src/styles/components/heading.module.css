@@ -37,3 +37,27 @@ header{
     position: absolute;
     right: 0;
 }
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem 1rem;
+        flex-wrap: wrap;
+    }
+
+    .nav > span {
+        display: none;
+    }
+
+    .nav :global(.start) {
+        position: static;
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .marca {
+        font-size: 0.95rem;
+    }
+}

@@ -8,14 +8,21 @@ import Footer from "./UI/footer.astro";
       rel="icon"
       type="image/svg+xml"
       href="/favicon.svg"
-    /><meta name="viewport" content="width=device-width" /><meta
+    /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta
       name="generator"
       content={Astro.generator}
-    /><title>Deep Teal Solutions</title></head
-  >
-</html>
+    /><title>Deep Teal Solutions</title>
+    <style is:global>
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 0; overflow-x: hidden; }
+      @media (max-width: 768px) {
+        body { padding: 0 0.5rem; }
+      }
+    </style>
+  </head>
 <body>
   <slot />
+  <Footer />
 </body>
-<Footer />
+</html>
 

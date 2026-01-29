@@ -49,6 +49,10 @@ const steps: Step[] = [
   .contenedor{
     background: #74747410;
     border-radius: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .pasos{
     padding-top: 2rem;
@@ -65,10 +69,10 @@ const steps: Step[] = [
   }
   .steps {
     padding: 5rem 1rem;
-  }
+  }  
 
   .steps__grid {
-    max-width: 1200px;
+    max-width: 100%;
     gap: 4rem;
     margin: 0 auto;
     display: grid;
@@ -136,28 +140,29 @@ const steps: Step[] = [
 
   /* responsive */
   @media (max-width: 900px) {
-    .steps__grid {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .step {
-      text-align: left;
-      max-width: 620px;
-      margin: 0 auto;
-    }
-
-    .step__top {
-      justify-items: start;
-    }
-
-    .step__line {
-      display: none; /* en mobile no conectamos */
-    }
-
-    .step__desc {
-      margin-inline: 0;
-      max-width: 55ch;
-    }
+  .steps__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
+
+  .step {
+    text-align: center;     /* ✅ centra texto */
+    max-width: 520px;
+    margin: 0 auto;         /* ✅ centra el bloque */
+  }
+
+  .step__top {
+    justify-items: center;  /* ✅ centra el círculo */
+  }
+
+  .step__line {
+    display: none;          /* ✅ sin conectores */
+  }
+
+  .step__desc {
+    margin-inline: auto;    /* ✅ centra el texto */
+    max-width: 45ch;
+  }
+}
+
 </style>

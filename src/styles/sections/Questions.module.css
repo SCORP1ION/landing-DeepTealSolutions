@@ -22,3 +22,29 @@
     font-size: 20px;
 }
 
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    .container .question {
+        font-size: 1rem;
+    }
+
+    .container .detalles {
+        margin: 8px;
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 1.25rem;
+    }
+}
+

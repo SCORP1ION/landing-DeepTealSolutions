@@ -7,6 +7,7 @@
     padding-bottom: 3rem;
     border-radius: 10px;
     margin: 0 auto;
+    max-width: 1200px;
 }
 
 .container img{
@@ -28,4 +29,46 @@
     color: #747474da;
     font-size: 1.25rem;
     text-wrap: absolute;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1rem;
+        max-width: 100%;
+    }
+
+    .container img {
+        margin-left: 0;
+        order: 1;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    .container .contenido {
+        order: 2;
+        padding: 0 1rem;
+    }
+
+    .container h1 {
+        max-width: none;
+        font-size: 1.75rem;
+    }
+
+    .contentText a {
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
 }

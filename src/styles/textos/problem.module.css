@@ -19,3 +19,23 @@
     text-wrap: balace;
 }
 
+@media (max-width: 768px) {
+    .contenedor {
+        margin: 1.5rem;
+    }
+
+    .contenedor h1 {
+        font-size: 2rem;
+    }
+
+    .contenedor a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor h1 {
+        font-size: 1.5rem;
+    }
+}
+
