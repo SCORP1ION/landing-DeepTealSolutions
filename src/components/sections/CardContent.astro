@@ -1,0 +1,68 @@
+---
+import Card from "../cards/Cards.astro";
+import Rocket from "../icons/rocket.astro";
+import Shiel from "../icons/shield.astro";
+import DiagramaVector from "../icons/DiagramaVector.astro";
+import PeopleAdd from "../icons/PeopleAdd.astro";
+import NetwordVector from "../icons/NetworkVector.astro"
+import Support from "../icons/support.astro"
+---
+
+<section class="cardsGrid">
+  <Card
+    title="Rapid Deploy"
+    description="Get your compaigns up and runnig in days, not months, with our streamlined onboarding."
+  >
+    <Rocket slot="icon" />
+  </Card>
+
+  <Card
+    title="Enterprise Segurity"
+    description="Your data is protected by industry-leanding encryption and compliance standars."
+  >
+    <Shiel slot="icon" />
+  </Card>
+
+  <Card
+    title="Real-Time Analytics"
+    description="Monitor performance as it happens with our custom-built dashboards solutions."
+  >
+    <DiagramaVector slot="icon" />
+  </Card>
+
+  <Card
+    title="Lead Qualificacion"
+    description="We filter out noise so your sales team only talks to prospects ready to buy."
+  >
+    <PeopleAdd slot="icon" />
+  </Card>
+
+  <Card
+    title="Seamless Integration"
+    description="Connects effortlessly with your existing CRM and marketing stack"
+  >
+  <NetwordVector slot="icon"/>
+</Card>
+  <Card
+    title="24/7 Expert Support"
+    description="Our dedicated team is always available to resolve issues and optimize results."
+  >
+    <Support slot="icon"/>
+</Card>
+</section>
+
+<style>
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 6rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .cardsGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

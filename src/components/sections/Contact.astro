@@ -1,0 +1,42 @@
+---
+import styles from "../../styles/sections/Contact.module.css";
+import Mail from "../icons/Mail.astro";
+import Phone from "../icons/Phone.astro";
+---
+
+<section class={styles.container}>
+  <div class={styles.cardPrimary}>
+    <h1>Let's Talk Business</h1>
+    <span
+      >Fill out the form and our team will get back to you within 24 hours</span
+    >
+      <p><Mail />Email Us</p>
+      <p>hello@deppteal.com</p>
+      <p><Phone />Call Us</p>
+      <p>+1 (555) 123-4567</p>
+  </div>
+
+  <div class={styles.cardSecundary}>
+  <div class={styles.field}>
+    <label for="name">Name</label>
+    <input id="name" type="text" placeholder="John Doe" />
+  </div>
+
+  <div class={styles.field}>
+    <label for="email">Email</label>
+    <input id="email" type="email" placeholder="john@company.com" />
+  </div>
+
+  <div class={styles.field}>
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      placeholder="How can we help you?"
+      rows="4"
+    ></textarea>
+  </div>
+
+  <button class={styles.send}>Send Message</button>
+</div>
+
+</section>

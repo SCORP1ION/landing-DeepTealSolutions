@@ -1,0 +1,57 @@
+---
+import styles from "../../styles/UI/footer.module.css"
+import Hexagon from "../icons/Hexagon.astro"
+import Arroba from "../icons/arroba.astro"
+import World from "../icons/world.astro"
+---
+<footer class={styles.footer}>
+  <div class={styles.top}>
+    {/* Brand */}
+    <div class={styles.brand}>
+      <span class={styles.logo}>
+        <Hexagon />
+        <strong>Deep Teal</strong>
+      </span>
+      <p class={styles.description}>
+        Empowering businesses with modern solutions for a digital world.
+      </p>
+      <a><World/></a>
+      <a><Arroba/></a>
+    </div>
+
+    {/* Navigation */}
+    <nav class={styles.nav} aria-label="Footer navigation">
+      <div class={styles.column}>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About us</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/press">Press</a></li>
+        </ul>
+      </div>
+
+      <div class={styles.column}>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/help">Help Center</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class={styles.column}>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/cookies">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class={styles.bottom}>
+    <p class={styles.copy}>
+      © 2024 Deep Teal Solutions. All rights reserved.
+    </p>
+  </div>
+</footer>

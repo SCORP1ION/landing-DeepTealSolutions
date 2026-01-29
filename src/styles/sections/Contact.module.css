@@ -1,0 +1,83 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: -2px -1px 22px -9px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: -2px -1px 22px -9px rgba(0, 0, 0, 1);
+  -moz-box-shadow: -2px -1px 22px -9px rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  width: min(50rem, 100%);
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.cardPrimary {
+  padding-top: 2rem;
+  margin-left: 2.5rem;
+}
+
+.cardPrimary span {
+  color: #667085;
+}
+.cardSecundary {
+  padding-top: 3rem;
+  display: grid;
+  gap: 1.25rem;
+  background: #74747410;
+  padding-left: 1.5rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.field input,
+.field textarea {
+  width: 80%;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.field textarea {
+  resize: none;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #98a2b3;
+}
+
+/* Focus */
+.field input:focus,
+.field textarea:focus {
+  border-color: #0b8f74;
+  box-shadow: 0 0 0 4px rgba(11, 143, 116, 0.15);
+}
+
+/* Botón */
+.send {
+  margin-top: 0.rem;
+  padding: 0.9rem;
+  border-radius: 10px;
+  background: #0b8f74;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  width: 90%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}

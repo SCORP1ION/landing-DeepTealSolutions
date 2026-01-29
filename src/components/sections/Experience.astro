@@ -1,0 +1,58 @@
+---
+import styles from "../../styles/sections/Experiencie.module.css";
+import Correct from "../icons/correct.astro";
+---
+
+<section class={styles.trust}>
+  <div class={styles.wrap}>
+    {/* Izquierda */}
+    <div class={styles.left}>
+      <h2>Built on Trust and Experience</h2>
+
+      <p>
+        Founded in 2012, Deep Teal Solutions has spent over a decade refining the art of digital
+        conversion. We believe in building long-term partnerships, not just vendor relationships.
+      </p>
+
+      <p>
+        Our team is composed of industry veterans who are passionate about data, design, and
+        delivering measurable results.
+      </p>
+
+      <div class={styles.stats}>
+        <div class={styles.stat}>
+          <strong>10+</strong>
+          <span>Years<br />Experience</span>
+        </div>
+
+        <div class={styles.stat}>
+          <strong>500+</strong>
+          <span>Clients<br />Served</span>
+        </div>
+
+        <div class={styles.stat}>
+          <strong>$50M</strong>
+          <span>Revenue<br />Generated</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Derecha */}
+    <aside class={styles.card}>
+      <h3>Free 30-Minute<br />Strategy Audit</h3>
+
+      <p class={styles.cardText}>
+        Not sure where to start? Let our experts analyze your current funnel and provide actionable
+        insights—completely free of charge.
+      </p>
+
+      <ul class={styles.list}>
+        <li>No obligation</li>
+        <li>Expert recommendations</li>
+      </ul>
+
+      <a class={styles.button} href="#">Claim Your Free Audit</a>
+    </aside>
+  </div>
+</section>
+

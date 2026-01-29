@@ -1,16 +1,18 @@
 ---
 import styles from "../../styles/components/heading.module.css";
 import Hexagon from "../icons/Hexagon.astro";
+import GetStarted from "./GetStarted.astro";
 ---
 
 <header>
-    <Hexagon/>
+    <Hexagon />
   <a class={styles.marca}>Deep Teal</a>
   <div class={styles.nav}>
     <span>Service</span>
     <span>Process</span>
     <span>Testimonials</span>
     <span>About</span>
-  </div>
-  <a class={styles.start}>Get Started</a>
+    <GetStarted />
+  </div> 
+  
 </header>

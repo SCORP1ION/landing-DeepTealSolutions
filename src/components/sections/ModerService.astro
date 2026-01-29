@@ -1,0 +1,27 @@
+---
+import styles from "../../styles/sections/ModerService.module.css";
+import Checkmark from "../icons/Checkmark.astro";
+import Idea from "../icons/Idea.astro";
+---
+
+<section class={styles.container}>
+  <img src="/image/computerAnalysis.jpg" />
+  <div class={styles.contenido}>
+    <Idea /> 
+    <h1>A Modern Approach to service</h1>
+    <div class={styles.contentText}>
+      <a
+        >We differentiate ourselves by focusing on speed, security, and
+        scalability. Unlike traditional agencies that bloat your budget, we
+        utilize lean methodologies to deploy solutions that actually move the
+        needle</a
+      >
+    </div>
+
+    <ul>
+      <p><Checkmark />Data-drive decision making</p>
+      <p><Checkmark />Transparent pricing models</p>
+      <p><Checkmark />Dedicated success manager</p>
+    </ul>
+  </div>
+</section>

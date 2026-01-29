@@ -1,0 +1,31 @@
+
+.container{
+    display: flex;
+    background-color: #74747410;
+    gap: 100px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.container img{
+    margin-left: 150px;
+    border-radius: 20px;
+}
+
+.container h1{
+    max-width: 10ch;
+    line-height: 1.35;
+}
+
+.contentText{
+    max-width: 52ch;
+    line-height: 1.25rem;
+}
+
+.contentText a{
+    color: #747474da;
+    font-size: 1.25rem;
+    text-wrap: absolute;
+}

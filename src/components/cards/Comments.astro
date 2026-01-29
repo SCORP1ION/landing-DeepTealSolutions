@@ -1,0 +1,171 @@
+---
+type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+  company: string;
+  avatar: string; // ruta a la imagen (public/...)
+  stars?: number;
+};
+
+const testimonials: Testimonial[] = [
+  {
+    quote:
+      "Deep Teal Solutions completely revolutionized our lead gen process. The ROI was visible within the first month.",
+    name: "Sarah Jenkins",
+    role: "CMO",
+    company: "TechFlow",
+    avatar: "/avatars/sarah.webp",
+    stars: 5,
+  },
+  {
+    quote:
+      "The level of detail in their strategy is unmatched. They didn't just give us tools, they gave us a roadmap.",
+    name: "Mark Davis",
+    role: "Founder",
+    company: "StartUp Inc",
+    avatar: "/avatars/mark.webp",
+    stars: 5,
+  },
+  {
+    quote:
+      "Highly professional team. The implementation was smooth and the support has been fantastic.",
+    name: "Emily Chen",
+    role: "Director of Sales",
+    company: "LogiStick",
+    avatar: "/avatars/emily.webp",
+    stars: 5,
+  },
+];
+---
+
+<section class="testimonials" aria-labelledby="testimonials-title">
+  <div class="wrap">
+    <header class="header">
+    </header>
+
+    <div class="grid">
+      {testimonials.map((t) => (
+        <article class="card">
+          <div class="stars" aria-label={`${t.stars ?? 5} out of 5 stars`}>
+            {Array.from({ length: t.stars ?? 5 }).map(() => (
+              <span class="star" aria-hidden="true">★</span>
+            ))}
+          </div>
+
+          <p class="quote">“{t.quote}”</p>
+
+          <div class="person">
+            <img class="avatar" src={t.avatar} alt={`Avatar of ${t.name}`} loading="lazy" />
+            <div class="meta">
+              <span class="name">{t.name}</span>
+              <span class="role">
+                {t.role}, {t.company}
+              </span>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding: 4rem 1rem;
+    border-radius: 10px;
+  }
+
+  .wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .header h2 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+  }
+
+  .header p {
+    margin: 0;
+    color: #666;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem;
+    align-items: start;
+  }
+
+  .card {
+    background: #f7f8fa;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: grid;
+    gap: 1rem;
+    min-height: 240px;
+  }
+
+  .stars {
+    display: flex;
+    gap: 0.35rem;
+  }
+
+  .star {
+    color: #f5a623; /* dorado */
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .quote {
+    margin: 0;
+    color: #111;
+    line-height: 1.6;
+    font-size: 1.05rem;
+  }
+
+  .person {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-top: 0.25rem;
+  }
+
+  .avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    object-fit: cover;
+    border: 2px solid rgba(0,0,0,0.06);
+  }
+
+  .meta {
+    display: grid;
+    gap: 0.15rem;
+  }
+
+  .name {
+    font-weight: 700;
+    color: #111;
+  }
+
+  .role {
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

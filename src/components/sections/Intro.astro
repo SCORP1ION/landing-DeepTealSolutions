@@ -1,18 +1,31 @@
 ---
-import styles from "../../styles/sections/intro.module.css"
+import GetStarted from "../UI/GetStarted.astro";
+import styles from "../../styles/sections/intro.module.css";
+import Correct from "../icons/correct.astro";
 ---
 
 <section class={styles.contenedor}>
   <div class={styles.info}>
-    <h2>Scale Your Operations with <strong class={styles.texto}>Confidence</strong></h2>
-    <span
-      >Stop losing leads and start seeing real ROI with proven conversasion
-      strategies desing for modern businesses</span>
-    <a>Get Started</a>
-    <a>How it works</a>
+    <h2>
+      Scale Your Operations with <strong class={styles.texto}>Confidence</strong
+      >
+    </h2>
+    <div class={styles.heroInfo}>
+      <span class={styles.infoSpan}
+        >Stop losing leads and start seeing real ROI with proven conversasion
+        strategies desing for modern</span
+      >
+      <span class={styles.infoSpan}>businesses</span>
+    </div>
+    <GetStarted />
+    <a class={styles.heroWorks}>How it works</a>
+    <div class={styles.botonesContainer}>
+      <p class={styles.botones}><Correct />No credit card require</p>
+      <p class={styles.botones}><Correct />14-days free trial</p>
+    </div>
   </div>
 
   <div class={styles.imagen}>
-    <img src="/image/reunion.jpg"/>
+    <img src="/image/reunion.jpg" />
   </div>
 </section>

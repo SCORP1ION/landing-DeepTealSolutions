@@ -1,0 +1,163 @@
+---
+type Step = {
+  title: string;
+  description: string;
+};
+
+const steps: Step[] = [
+  {
+    title: "Audit & Strategy",
+    description:
+      "We analyze your current setup and identify key bottlenecks preventing growth.",
+  },
+  {
+    title: "Implementation",
+    description:
+      "Our team integrates the solution seamlessly without disrupting your daily operations.",
+  },
+  {
+    title: "Growth & Scale",
+    description:
+      "Watch your metrics improve as we optimize and scale your successful campaigns.",
+  },
+];
+---
+
+<div class="contenedor">
+  <span class="titulo">PROCESS</span>
+  <h2 class="pasos">Simple 3-Step Integration</h2>
+  <section class="steps">
+    <div class="steps__grid">
+      {
+        steps.map((step, idx) => (
+          <article class="step">
+            <div class="step__top" aria-hidden="true">
+              <span class="step__dot">{idx + 1}</span>
+              {idx !== steps.length - 1 && <span class="step__line" />}
+            </div>
+
+            <h3 class="step__title">{step.title}</h3>
+            <p class="step__desc">{step.description}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</div>
+
+<style>
+  .contenedor{
+    background: #74747410;
+    border-radius: 20px;
+  }
+  .pasos{
+    padding-top: 2rem;
+    margin: auto;
+    text-align: center;
+    font-size: 50px;
+}
+  .titulo {
+    padding-top: 5rem;
+    color: rgb(8, 164, 129);
+    text-align: center;
+    display: block;
+    font-size: large;
+  }
+  .steps {
+    padding: 5rem 1rem;
+  }
+
+  .steps__grid {
+    max-width: 1200px;
+    gap: 4rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3rem;
+  }
+
+  .step {
+    text-align: center;
+  }
+
+  /* top (circle + connector) */
+  .step__top {
+    position: relative;
+    display: grid;
+    place-items: center;
+    margin-bottom: 1rem;
+    min-height: 74px;
+  }
+
+  .step__dot {
+    width: 92px;
+    height: 92px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #1f6f5b;
+    border-width: 2.5px;
+
+    background: #fff;
+    border: 2px solid rgba(31, 111, 91, 0.18);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    z-index: 2;
+  }
+
+  .step__line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% + 3rem); /* conecta hasta el siguiente card (gap) */
+    height: 2.5px;
+    background: rgba(31, 111, 91, 0.22);
+    z-index: 1;
+  }
+
+  .step__title {
+    margin: 0.75rem 0 0.5rem;
+    font-size: 1.35rem;
+    margin-top: 1.25rem;
+    font-weight: 700;
+    color: #111;
+  }
+
+  .step__desc {
+    font-size: 1.05rem;
+    margin: 0;
+    color: #555;
+    line-height: 1.65;
+    max-width: 32ch;
+    margin-inline: auto;
+  }
+
+  /* responsive */
+  @media (max-width: 900px) {
+    .steps__grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .step {
+      text-align: left;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .step__top {
+      justify-items: start;
+    }
+
+    .step__line {
+      display: none; /* en mobile no conectamos */
+    }
+
+    .step__desc {
+      margin-inline: 0;
+      max-width: 55ch;
+    }
+  }
+</style>

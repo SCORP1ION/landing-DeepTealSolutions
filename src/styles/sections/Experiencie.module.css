@@ -1,0 +1,141 @@
+.trust{
+  padding: 4rem 1rem;
+  background: #74747410;
+  margin-bottom: 5rem;
+  border-radius: 10px;
+}
+
+.wrap{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr; /* izquierda más ancha */
+  gap: 3rem;
+  align-items: start;
+}
+
+.left h2{
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.left p{
+  margin: 0 0 1rem;
+  color: #667085;
+  line-height: 1.7;
+  max-width: 60ch;
+}
+
+/* stats */
+.stats{
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.stat strong{
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #0b8f74;
+  line-height: 1;
+}
+
+.stat span{
+  display: block;
+  margin-top: 0.35rem;
+  color: #667085;
+  font-size: 0.9rem;
+  line-height: 1.25;
+}
+
+/* card derecha */
+.card{
+  background: #dff2ee;
+  border-radius: 14px;
+  padding: 1.75rem;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card h3{
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.cardText{
+  margin: 0.75rem 0 1rem;
+  color: #2f3a3a;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* lista con checks */
+.list{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: grid;
+  gap: 0.65rem;
+  color: #2f3a3a;
+  font-size: 0.95rem;
+}
+
+.list li{
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.list li::before{
+  content: "✓";
+  width: 18px;
+  height: 18px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(11,143,116,0.15);
+  color: #0b8f74;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+/* botón */
+.button{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  background: #0b8f74;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* responsive */
+@media (max-width: 900px){
+  .wrap{
+    grid-template-columns: 1fr;
+  }
+
+  .card{
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .stats{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 520px){
+  .stats{
+    grid-template-columns: 1fr;
+  }
+}
