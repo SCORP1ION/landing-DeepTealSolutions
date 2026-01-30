@@ -1,63 +1,47 @@
-
-header{
-    padding: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
- 
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .nav {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    align-items: center;
-    position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.nav > span {
-    margin: 0 1rem;
-    align-items: center;
-    text-align: center;
-    padding: 0.5rem;
+.nav span {
+  font-size: large;
+  color: #747474;
+  cursor: pointer;
 }
 
-.nav span{
-    font-size: large;
-    color: #747474;
+.marca {
+  font-weight: 700;
 }
 
-.marca{
-    font-weight: 700;
+/* Botón hamburguesa oculto en desktop */
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
-.nav > span:hover{
-    cursor: pointer;
-}
-
-.nav :global(.start) {
-    position: absolute;
-    right: 0;
-}
-
-/* Responsive - Mobile */
 @media (max-width: 768px) {
-    header {
-        padding: 0.5rem 1rem;
-        flex-wrap: wrap;
-    }
+  .nav {
+    display: none; /* ⬅️ ocultamos links */
+  }
 
-    .nav > span {
-        display: none;
-    }
-
-    .nav :global(.start) {
-        position: static;
-        font-size: 0.9rem;
-        padding: 8px 14px;
-    }
+  .menuBtn {
+    display: block; /* ⬅️ mostramos hamburguesa */
+  }
 }
 
-@media (max-width: 480px) {
-    .marca {
-        font-size: 0.95rem;
-    }
-}

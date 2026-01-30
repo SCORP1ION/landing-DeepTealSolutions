@@ -4,15 +4,23 @@ import Hexagon from "../icons/Hexagon.astro";
 import GetStarted from "./GetStarted.astro";
 ---
 
-<header>
+<header class={styles.header}>
+  <div class={styles.left}>
     <Hexagon />
-  <a class={styles.marca}>Deep Teal</a>
-  <div class={styles.nav}>
+    <a class={styles.marca}>Deep Teal</a>
+  </div>
+
+  <nav class={styles.nav}>
     <span>Service</span>
     <span>Process</span>
     <span>Testimonials</span>
     <span>About</span>
     <GetStarted />
-  </div> 
-  
+  </nav>
+
+  {/* Botón hamburguesa */}
+  <button class={styles.menuBtn} aria-label="Open menu">
+    ☰
+  </button>
 </header>
+ 
