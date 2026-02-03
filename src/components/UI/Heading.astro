@@ -11,16 +11,17 @@ import GetStarted from "./GetStarted.astro";
   </div>
 
   <nav class={styles.nav}>
-    <span>Service</span>
-    <span>Process</span>
-    <span>Testimonials</span>
-    <span>About</span>
-    <GetStarted />
+    <div class={styles.navLinks}>
+      <span>Service</span>
+      <span>Process</span>
+      <span>Testimonials</span>
+      <span>About</span>
+    </div>
+    <div class={styles.right}>
+      <GetStarted />
+    </div>
   </nav>
 
   {/* Botón hamburguesa */}
-  <button class={styles.menuBtn} aria-label="Open menu">
-    ☰
-  </button>
+  <button class={styles.menuBtn} aria-label="Open menu"> ☰ </button>
 </header>
- 
