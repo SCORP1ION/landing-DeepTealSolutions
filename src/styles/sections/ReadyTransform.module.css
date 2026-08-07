@@ -22,10 +22,9 @@
 }
 
 .container .Started{
-    display: inline-block;
     background: white;
     color: #0b8f74;
-    padding: .5rem;
+    padding: .7rem;
     border-radius: 10px;
     cursor: pointer;
     height: 4vh;
@@ -36,11 +35,10 @@
 }
 
 .container .Demo{
-    display: inline-block;
     border: 1px solid rgb(255, 255, 255);
     background: #07614f;
     color: white;
-    padding: .5rem;
+    padding: .7rem;
     border-radius: 10px;
     cursor: pointer;
     height: 4vh;
